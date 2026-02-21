@@ -1,12 +1,12 @@
 {
-  "compilerOptions": {
-    "target": "es2018",
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "sourceMap": true,
-    "skipLibCheck": true
-  },
-  "include": ["my_plugins"],
-  "exclude": ["**/node_modules/**"]
+    "compilerOptions": {
+        "target": "es2018",
+        "strict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "sourceMap": true,
+        "skipLibCheck": true
+    },
+    "include": ["my_plugins"],
+    "exclude": ["**/node_modules/**"]
 }
