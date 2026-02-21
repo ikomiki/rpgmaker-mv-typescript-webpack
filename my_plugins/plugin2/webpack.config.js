@@ -2,7 +2,6 @@ const path = require("node:path");
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 
 const pluginName = __dirname.replace(/\\/g, "/").split("/").pop();
-console.log(pluginName);
 
 module.exports = {
     entry: [path.resolve(__dirname, "./main.ts")],

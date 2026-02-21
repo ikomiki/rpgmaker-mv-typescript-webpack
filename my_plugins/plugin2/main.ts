@@ -2,14 +2,18 @@
 
 import { MyPlugin } from "./myPlugin";
 
-const old_initialize = Game_Interpreter.prototype.initialize;
-
-class exInterpreter extends Game_Interpreter {
-    public myPlugin2: MyPlugin;
-    public initialize(depth) {
-        old_initialize.call(this, depth);
-        this.myPlugin2 = new MyPlugin();
+declare global {
+    interface Game_Interpreter {
+        myPlugin2: MyPlugin;
     }
 }
 
-Game_Interpreter.prototype = exInterpreter.prototype;
+const _Game_Interpreter_initialize = Game_Interpreter.prototype.initialize;
+
+Game_Interpreter.prototype.initialize = function (
+    this: Game_Interpreter,
+    depth: number,
+): void {
+    _Game_Interpreter_initialize.call(this, depth);
+    this.myPlugin2 = new MyPlugin();
+};
