@@ -1,9 +1,9 @@
 export class MyPlugin {
     constructor() {
-        console.log("inintializing MyPlugin2!")
+        console.log("initializing MyPlugin2!");
     }
 
-    public DoSomething() {
-        console.log("I'm doing something!!!2");
+    doSomething(): void {
+        console.log("I'm doing something! (plugin2)");
     }
 }
