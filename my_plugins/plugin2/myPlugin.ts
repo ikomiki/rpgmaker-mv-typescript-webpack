@@ -1,6 +1,6 @@
 export class MyPlugin {
     constructor() {
-        console.log("inintializing MyPlugin2!")
+        console.log("inintializing MyPlugin2!");
     }
 
     public DoSomething() {

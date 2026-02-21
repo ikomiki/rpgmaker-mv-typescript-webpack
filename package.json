@@ -1,28 +1,30 @@
 {
-  "name": "project-name",
-  "main": "index.html",
-  "js-flags": "--expose-gc",
-  "window": {
-    "title": "",
-    "toolbar": false,
-    "width": 816,
-    "height": 624,
-    "icon": "icon/icon.png"
-  },
-  "scripts": {
-      "plugin1-build-linux": "./node_modules/.bin/webpack --config my_plugins/plugin1/webpack.config.js",
-      "plugin1-build": "./node_modules/.bin/webpack.cmd --config my_plugins/plugin1/webpack.config.js",
-      "plugin1-watch": "./node_modules/.bin/webpack.cmd --config my_plugins/plugin1/webpack.config.js --watch",
-      "plugin2-build": "./node_modules/.bin/webpack.cmd --config my_plugins/plugin2/webpack.config.js",
-      "plugin2-watch": "./node_modules/.bin/webpack.cmd --config my_plugins/plugin2/webpack.config.js --watch"
-  },
-  "devDependencies": {
-    "fork-ts-checker-webpack-plugin": "^0.4.9",
-    "rpgmakermv_typescript_dts": "latest",
-    "ts-loader": "^5.1.0",
-    "tslint": "^5.11.0",
-    "typescript": "latest",
-    "webpack": "^4.19.0",
-    "webpack-cli": "^3.1.0"
-  }
+    "name": "project-name",
+    "main": "index.html",
+    "js-flags": "--expose-gc",
+    "window": {
+        "title": "",
+        "toolbar": false,
+        "width": 816,
+        "height": 624,
+        "icon": "icon/icon.png"
+    },
+    "scripts": {
+        "plugin1-build": "webpack --config my_plugins/plugin1/webpack.config.js",
+        "plugin1-watch": "webpack --config my_plugins/plugin1/webpack.config.js --watch",
+        "plugin2-build": "webpack --config my_plugins/plugin2/webpack.config.js",
+        "plugin2-watch": "webpack --config my_plugins/plugin2/webpack.config.js --watch",
+        "lint": "biome check .",
+        "lint:fix": "biome check --write ."
+    },
+    "devDependencies": {
+        "@biomejs/biome": "^1.9.0",
+        "fork-ts-checker-webpack-plugin": "^9.0.0",
+        "rpgmakermv_typescript_dts": "latest",
+        "ts-loader": "^9.5.0",
+        "typescript": "latest",
+        "webpack": "^5.97.0",
+        "webpack-cli": "^5.1.0"
+    },
+    "trustedDependencies": ["@biomejs/biome"]
 }

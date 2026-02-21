@@ -1,5 +1,0 @@
-{
-    "rules": {
-    },
-    "exclude": "**/node_modules/**"
-}
